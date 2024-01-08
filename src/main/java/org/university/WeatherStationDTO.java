@@ -1,4 +1,4 @@
-package org.arksena;
+package org.university;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -6,9 +6,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class WeatherForecastDTO {
+public class WeatherStationDTO {
     private double latitude;
     private double longitude;
     private double generationTimeMs;
@@ -108,6 +107,18 @@ public class WeatherForecastDTO {
                 .collect(Collectors.toList());
     }
 
-
-
+    @Override
+    public String toString() {
+        return "WeatherForecastDTO{" +
+                "latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", generationTimeMs=" + generationTimeMs +
+                ", utcOffsetSeconds=" + utcOffsetSeconds +
+                ", timezone='" + timezone + '\'' +
+                ", timezoneAbbreviation='" + timezoneAbbreviation + '\'' +
+                ", elevation=" + elevation +
+                ", hourly=" + hourly +
+                ", daily=" + daily +
+                '}';
+    }
 }

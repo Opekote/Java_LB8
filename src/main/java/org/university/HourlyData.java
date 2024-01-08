@@ -1,4 +1,4 @@
-package org.arksena;
+package org.university;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
